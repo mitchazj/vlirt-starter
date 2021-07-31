@@ -1,4 +1,6 @@
-require('./bootstrap');
+import 'vite/dynamic-import-polyfill';
+import '../css/app.css';
+import './bootstrap'
 
 // Import modules...
 import React from 'react';
@@ -9,7 +11,10 @@ import { InertiaProgress } from '@inertiajs/progress';
 const el = document.getElementById('app');
 
 render(
-    <App initialPage={JSON.parse(el.dataset.page)} resolveComponent={(name) => require(`./Pages/${name}`).default} />,
+    <App initialPage={JSON.parse(el.dataset.page)} resolveComponent={async (name) => {
+        console.log(name);
+        return (await import(`./Pages/${name}.jsx`)).default
+    }} />,
     el
 );
 
