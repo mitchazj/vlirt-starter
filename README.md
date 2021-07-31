@@ -6,7 +6,6 @@ It's designed to save you 30 mins of setup time for a new fullstack project, and
 
 -   included unnecessarily
 -   behaving like dead weight
--   setup to be a pain
 -   configured in a way that you can't easily change
 
 I dislike templates that 'add too much', or use poorly documented non-standard setup, so I'm trying to keep it as simple as possible.
@@ -48,6 +47,8 @@ Ie, what would you need to do if you _didn't_ want to use this template?
 3. Boot Laravel Mix and replace it with Vite
 4. Setup Tailwind CSS in JIT mode
 5. Setup hot-reloading for all routes
+
+TODO: planning a small blog post detailing a step-by-step walkthrough to create this template yourself if you really wanted to.
 
 ## Documentation for Included Libraries
 
