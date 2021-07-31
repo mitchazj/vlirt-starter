@@ -1,4 +1,4 @@
-# VLIRT-Starter (vite, react, tailwindcss)
+# VLIRT-Starter (vite, laravel, inertia, react, tailwind css)
 
 The most lightweight, vanilla template for Laravel, Inertia, React, Vite, & Tailwind CSS (JIT)
 
