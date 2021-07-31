@@ -12,7 +12,6 @@ const el = document.getElementById('app');
 
 render(
     <App initialPage={JSON.parse(el.dataset.page)} resolveComponent={async (name) => {
-        console.log(name);
         return (await import(`./Pages/${name}.jsx`)).default
     }} />,
     el
