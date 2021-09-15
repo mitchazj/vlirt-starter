@@ -1,0 +1,1 @@
+import{R as e}from"./vendor.e271832b.js";function t({forInput:t,value:r,className:a,children:l}){return e.createElement("label",{htmlFor:t,className:"block font-medium text-sm text-gray-700 "+a},r||{children:l})}export{t as L};

@@ -1,1 +1,0 @@
-import{_ as e,a,r as t,R as o,A as s,I as n}from"./vendor.5a3003cd.js";window._=e,window.axios=a,window.axios.defaults.headers.common["X-Requested-With"]="XMLHttpRequest";const r=document.getElementById("app");t.exports.render(o.createElement(s,{initialPage:JSON.parse(r.dataset.page),resolveComponent:e=>require(`./Pages/${e}`).default}),r),n.init({color:"#4B5563"});
