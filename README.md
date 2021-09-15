@@ -4,13 +4,16 @@
 
 The most lightweight, vanilla template for Laravel, Inertia, React, Vite, & Tailwind CSS (JIT)
 
-It's designed to save you 30 mins of setup time for a new fullstack project, and give you peace of mind that nothing is:
+It's designed to save you 30 mins of setup time for a new fullstack project.
+
+We aim for peace of mind by ensuring that nothing is:
 
 -   included unnecessarily
 -   behaving like dead weight
 -   configured in a way that you can't easily change
 
 I dislike templates that 'add too much', or use poorly documented non-standard setup, so I'm trying to keep it as simple as possible.
+There shouldn't be anything that you would ever want to remove from this starter, if VLIRT is what you're going for.
 
 Got contribution ideas? Found something that's a pain point? I'd love to hear them in the issues tab :)
 
