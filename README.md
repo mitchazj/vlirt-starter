@@ -1,3 +1,5 @@
+![vlirt-preset](https://user-images.githubusercontent.com/15032956/133377416-d80b11a4-5191-490a-b5f6-5ec26fcefafd.png)
+
 # VLIRT-Starter (vite, laravel, inertia, react, tailwind)
 
 The most lightweight, vanilla template for Laravel, Inertia, React, Vite, & Tailwind CSS (JIT)
