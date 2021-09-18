@@ -84,7 +84,3 @@ TODO: planning a small blog post detailing a step-by-step walkthrough to create 
 -   Stay up-to-date with the latest version of Laravel (last checked 31/07/2021)
 -   Stay up-to-date with the latest version of Tailwind CSS (last checked 31/07/2021)
 -   Stay up-to-date with the latest versions of Vite, React, & Inertia (last checked 31/07/2021)
-
-# Credits
-
--   @mitchazj
