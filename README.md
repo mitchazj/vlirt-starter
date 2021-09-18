@@ -23,7 +23,7 @@ Got contribution ideas? Found something that's a pain point? I'd love to hear th
 
 ## Quick Start
 
-This is if you are running locally. You could also just clone this repo, and then open it in GitPod.
+This is if you are running locally. You could also just generate a repo from this template and open it in GitPod.
 
 ```bash
 # or use the template button on this repo
