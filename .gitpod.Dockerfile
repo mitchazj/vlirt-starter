@@ -1,1 +1,1 @@
-FROM mitchazj/workspace-mysql
+FROM mitchazj/workspace-mysql:latest
