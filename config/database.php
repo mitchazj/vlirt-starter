@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'planetscale'),
 
     /*
     |--------------------------------------------------------------------------
@@ -41,6 +41,36 @@ return [
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
+        ],
+
+        'planetscale' => [
+            'driver' => 'mysql',
+            'url' => env('PL_DATABASE_URL'),
+            'host' => env('PL_DB_HOST', '127.0.0.1'),
+            'port' => env('PL_DB_PORT', '3306'),
+            'database' => env('PL_DB_DATABASE', 'forge'),
+            'username' => env('PL_DB_USERNAME', 'forge'),
+            'password' => env('PL_DB_PASSWORD', ''),
+            'unix_socket' => env('PL_DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'sslmode' => 'require',
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                // PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA', '/certs/ca.pem'),
+                // PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false,
+                // PDO::MYSQL_ATTR_SSL_KEY => '/certs/client-key.pem',
+                // PDO::MYSQL_ATTR_SSL_CERT => '/certs/client-cert.pem',
+
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA', '/etc/ssl/cert.pem'),
+                PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false,
+
+                // PDO::MYSQL_ATTR_SSL_KEY => '/certs/client-key.pem',
+                // PDO::MYSQL_ATTR_SSL_CERT => '/certs/client-cert.pem',
+            ]) : [],
         ],
 
         'mysql' => [
