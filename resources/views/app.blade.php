@@ -11,10 +11,10 @@
         {{-- https://sebastiandedeyne.com/vite-with-laravel/ --}}
         @production
             @php
-                $manifest = json_decode(file_get_contents(public_path('build/manifest.json')), true);
+                $manifest = json_decode(file_get_contents(public_path('dist/manifest.json')), true);
             @endphp
-            <script type="module" src="/build/{$manifest['resources/js/app.js']['file']}"></script>
-            <link rel="stylesheet" href="/build/{$manifest['resources/js/app.js']['css'][0]}">
+            <script type="module" src="/dist/{{ $manifest['resources/js/app.jsx']['file'] }}" defer></script>
+            <link rel="preload" href="/dist/{{ $manifest['resources/js/app.jsx']['css'][0] }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
         @else
             <script type="module">
                 import RefreshRuntime from "http://localhost:3000/@react-refresh"
