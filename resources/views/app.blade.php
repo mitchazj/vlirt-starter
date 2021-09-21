@@ -13,8 +13,8 @@
             @php
                 $manifest = json_decode(file_get_contents(public_path('dist/manifest.json')), true);
             @endphp
-            <script type="module" src="/dist/{{ $manifest['resources/js/app.jsx']['file'] }}" defer></script>
-            <link rel="preload" href="/dist/{{ $manifest['resources/js/app.jsx']['css'][0] }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+            <script type="module" src="{{ asset('/dist/' . $manifest['resources/js/app.jsx']['file']) }}" defer></script>
+            <link rel="preload" href="{{ asset('/dist/' . $manifest['resources/js/app.jsx']['css'][0]) }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
         @else
             <script type="module">
                 import RefreshRuntime from "http://localhost:3000/@react-refresh"
