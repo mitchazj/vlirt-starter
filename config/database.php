@@ -60,12 +60,12 @@ return [
             'engine' => null,
             'sslmode' => 'require',
             'options' => extension_loaded('pdo_mysql') ? array_filter([
-                // On ubuntu / debian, use this certificate
-                // PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA', '/etc/ssl/certs/ca-certificates.crt'),
-                // On Mac OS X, use this certificate
-                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA', '/etc/ssl/cert.pem'),
-                // Required to use SSL
+                // Use SSL for mysql connection
                 PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false,
+                // TODO: support Windows
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA', Str::contains(Str::lower(PHP_OS), 'linux')
+                    ? '/etc/ssl/certs/ca-certificates.crt'
+                    : '/etc/ssl/cert.pem'),
             ]) : [],
         ],
 
