@@ -15,6 +15,10 @@ use Inertia\Inertia;
 |
 */
 
+Route::get('/testdb', function () {
+    return response()->json(\App\Models\User::all());
+});
+
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
