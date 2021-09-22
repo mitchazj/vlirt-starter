@@ -15,6 +15,20 @@ use Inertia\Inertia;
 |
 */
 
+Route::get('/phpinfo', function () {
+    return phpinfo();
+});
+
+Route::get('/osinfo', function () {
+    return response()->json([
+        'os' => PHP_OS,
+        'php' => PHP_VERSION,
+        'laravel' => app()->version(),
+        'database' => env('DB_CONNECTION'),
+        'cert_exists' => file_exists('/etc/ssl/cert.pem'),
+    ]);
+});
+
 Route::get('/testdb', function () {
     return response()->json(\App\Models\User::all());
 });
@@ -32,4 +46,4 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Str;
 
+$cert_exists = file_exists('/etc/ssl/cert.pem');
+
 return [
 
     /*
@@ -63,7 +65,7 @@ return [
                 // Use SSL for mysql connection
                 PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false,
                 // TODO: support Windows
-                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA', Str::contains(Str::lower(PHP_OS), 'linux')
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA', !$cert_exists && Str::contains(Str::lower(PHP_OS), 'linux')
                     ? '/etc/ssl/certs/ca-certificates.crt'
                     : '/etc/ssl/cert.pem'),
             ]) : [],
