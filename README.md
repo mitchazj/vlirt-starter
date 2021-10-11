@@ -1,4 +1,4 @@
-![vlirt-preset](https://user-images.githubusercontent.com/15032956/133401378-12b13fbd-9c58-40ee-9efb-e3a7036fe6c7.png)
+![VLIRT-Starter](https://user-images.githubusercontent.com/15032956/136723101-5a293cd4-76b3-4826-ae9f-7bee41b0f8d9.jpg)
 
 # VLIRT-Starter (vite, laravel, inertia, react, tailwind)
 
